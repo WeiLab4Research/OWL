@@ -1,4 +1,4 @@
-# get result of owl_system.
+# OWL model.
 OWL = function(data, # The personal information must be a data frame. 
                wd # Path to the owl model 'data' folder. 
                ){
@@ -63,7 +63,3 @@ OWL = function(data, # The personal information must be a data frame.
                            absolute_risk = absolute_risk_t))
   
 }
-
-
-
-
