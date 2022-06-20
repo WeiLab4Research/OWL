@@ -11,8 +11,8 @@ File list:
 Usage
 The following are the step for using the code.
 Step 1: First, decompress the 'data.zip' file.
-Step 1: Second, Start the R software and use the 'source' function to load the 'OWL' function.
-Step 2: Finally, you could use the 'OWL' function to predict individuals' lung cancer risk by providing
+Step 2: Second, Start the R software and use the 'source' function to load the 'OWL' function.
+Step 3: Finally, you could use the 'OWL' function to predict individuals' lung cancer risk by providing
             two parameters.
 
 Arguments
