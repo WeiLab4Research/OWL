@@ -1,7 +1,8 @@
-# OWL model.
+# get result of owl_system.
 OWL = function(data, # The personal information must be a data frame. 
                wd # Path to the owl model 'data' folder. 
                ){
+  
   setwd(wd)
 
   # Load two packages.
@@ -35,11 +36,6 @@ OWL = function(data, # The personal information must be a data frame.
   # Never smoker, the age_begin_smoke define as 99.
   ds$age_begin_smoke[which(ds$smoke_status==0)] = 99
   
-  # Feature-engineer.
-  ds$age_trans = (ds$age/100)^-2
-  ds$bmi_trans = (ds$bmi)^-1
-  ds$ncig_trans = ifelse(ds$ncig==0,100,(ds$ncig/10)^-1)
-  
   xgb_ds = list(data = Matrix(data.matrix(ds[, vindependets]),
                               sparse = TRUE))
   
@@ -63,3 +59,5 @@ OWL = function(data, # The personal information must be a data frame.
                            absolute_risk = absolute_risk_t))
   
 }
+
+
